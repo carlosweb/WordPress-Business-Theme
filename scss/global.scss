@@ -1,0 +1,95 @@
+// css global
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    color: #222222;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    color:#3e3e3e;
+}
+
+.highlight {
+    color: $color-primary;
+}
+
+.text-white{
+    h1,h2,h3,h4,h5,h6,p{
+        color: #FFFFFF;
+    }
+} 
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    h2{
+        font-size: 3rem;
+        p{
+        font-size: 1rem;
+        }
+    }
+}
+
+.btn{
+    padding: 20px 40px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    transition: 2s ease-in-out;
+}
+
+.bg-primary{
+    background-color: $color-default;
+    color: #222222; 
+}
+
+
+.primary{
+    background-color: $color-primary;
+    color: #f2f2f2;
+}
+
+.warning{
+    background-color: $color-warning;
+    color: #222222;
+}
+.active-plan{
+    background-color: $color-primary;
+    color: #222222;
+}
+
+.bt-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+// scroll css
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f2f2f2;
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: $color-primary;
+}

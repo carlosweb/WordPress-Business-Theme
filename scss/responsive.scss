@@ -1,0 +1,140 @@
+//  -------   media queries style
+
+@media (max-width: 1140px) {
+    .services .content {
+        max-width: 960px;
+        height: 60vh;
+    }
+    .jobs .content {
+        max-width: 960px;
+        height: 100%;
+    }
+    .services {
+        padding: 3rem 0;
+    }
+ }
+
+@media (max-width: 960px) {
+   
+ }
+
+ @media (max-width: 840px) {
+   
+ }
+
+
+ @media (max-width: 570px) {
+
+    .menu{
+        width: 100%;
+    }
+
+    .menu .lines {
+        top: 18px;
+    }
+    .menu ul li a {
+        font-size: 1rem;
+    }
+    nav {
+        .logo a img {
+            width: 40%;
+        }
+    }
+
+    .menu ul li a::before {
+        transform: translateY(7px);
+    }
+
+    .about .content{
+       height: 40vh;
+    }
+
+    .about .content .description {
+        padding: 2rem;
+    }
+    .about .content .description p {
+        text-align: left;
+    }
+
+    .about .content .description h1 {
+      font-size: 1.5rem;
+  }
+  .about .content .description .text-about p {
+      font-size: 1rem;
+}
+
+  .header  {
+   height: 80vh;
+}
+
+  .header .box-header {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   grid-template-columns: 1fr;
+   height: 80vh;
+}
+
+.header .box-header .content {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   grid-template-columns: 1fr;
+}
+
+.header .box-header h1 {
+    font-size: 1.8rem;
+}
+
+.header .box-header h3 {
+   width: 100%;
+   font-size: 1.2rem;
+}
+
+.left-content:last-child{
+   text-align: center;
+}
+
+.header .box-header .content .right-content {
+   display: none;
+}
+.header .box-header {
+   padding: 30px;
+}
+
+  
+.services .content .box-card {
+   grid-template-columns: 1fr;
+}
+.services .content {
+   height: auto;
+   max-width:$max-with-responsive-small;
+}
+
+.plans .content {
+max-width: $max-with-responsive-small;
+height: auto;
+}
+  .plans .content .box-plan {
+   grid-template-columns: 1fr;
+}
+
+.plans .content .box-plan .plan-box ul {
+   height: 20vh;
+}
+
+.contact-form .content {
+   max-width: $max-with-responsive-small;
+   height: auto;
+   grid-template-columns: 1fr;
+   gap: 20px;
+}
+
+.title h2{
+   font-size: 1.8rem;
+}
+
+.about .content .description .text-about {
+   width: 100%;
+   }
+}

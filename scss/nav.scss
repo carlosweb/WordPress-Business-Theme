@@ -1,0 +1,125 @@
+
+
+// css nav
+
+nav{
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    transition: 500ms ease-in-out;
+
+    .logo{
+        a{
+            h1{
+                margin: 0 0 0 20px;
+                font-weight: 700;
+                font-size: 2rem;
+                color: $white-text;
+            }
+        }
+    }
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:-100%;
+    background-color: $color-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.8s cubic-bezier(1, 0, 0, 1);
+    scroll-behavior: smooth;
+    
+    ul{
+        text-align: center;
+        li{
+            list-style: none;
+            margin: 25px;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: 500ms ease-in-out;
+               
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    
+    .lines{
+        width: 40px;
+        height: 30px;
+        position: fixed;
+        top: 26px;
+        right: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .line{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all 0.8s;
+        }
+    }
+}
+
+.change{
+    top: 0;
+}
+
+
+.change .line-1{
+    transform: rotateZ(-405deg) translate(-6px, 5px);
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotateZ(405deg) translate(-10px, -8px);
+}
+
+
+.nav-bg{
+    background-color: #FFFFFF;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: 500ms ease-in-out;
+    height: 70px;
+    z-index: 50;
+    .logo{
+        a{
+            h1{
+                font-size: 1.5rem;
+                color: $color-default;
+            }
+        }
+    }
+
+    .lines{
+        top: 20px;
+        .line{
+            background-color: #0142EC;
+        }
+    }
+}
+
+.change{
+    .lines{
+        .line{
+            background-color: $color-primary;
+        }
+    }
+}
