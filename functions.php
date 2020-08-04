@@ -8,11 +8,11 @@
 function add_estilos_e_scripts() {
 
     if (is_home()) {
-        wp_enqueue_style( 'default', get_template_directory_uri() . './style.css');
+        wp_enqueue_style( 'default', get_template_directory_uri() . '/style.css');
         }
 
         if (is_page()) {
-            wp_enqueue_style( 'default', get_template_directory_uri() . './style.css');
+            wp_enqueue_style( 'default', get_template_directory_uri() . '/style.css');
             }
             
             if (is_single()) {

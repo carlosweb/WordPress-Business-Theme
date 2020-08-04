@@ -38,58 +38,32 @@
     </div>
     <div class="content">
         <div class="box-card">
-            <div class="card" data-aos="fade-up">
-                <i class="fas fa-fish fa-4x"></i>
-                <h3>Peixes e Camarões</h3>
-                <p>Having been around for over a de, Basecamp is considered a reliable tool that excels at giving.</p>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <i class="fas fa-utensils fa-4x"></i>
-                <h3>Tenha uma Franquia</h3>
-                <p>Having been around for over a de, Basecamp is considered a reliable tool that excels at giving.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                <i class="fas fa-briefcase fa-4x"></i>
-                <h3>Business B2B</h3>
-                <p>Having been around for over a de, Basecamp is considered a reliable tool that excels at giving.</p>
-            </div>
+           
+            <?php
+			   	  // Loop get category services
+                  $de_query_sql = new WP_Query(array(
+                  	'post_per_page' => 3,
+                  	'post_type'  => 'post',
+                  	'category_name' => 'serviços',
+                  	'orderby' => 'ASC'
+                  ));
+                  	if($de_query_sql->have_posts()){
+                  		while($de_query_sql->have_posts()){
+                  			$de_query_sql->the_post();
+                  		?>
+                              <div class="card">
+                                <i class="fas fa-utensils fa-4x"></i>
+                                <h3><?php the_title() ?></h3>
+                                <p><?php the_content() ?></p>
+                              </div>
+               	            <?php
+                  		}
+                  	}
+                    ?>
         </div>
     </div>
 </section>
 
-<!-- section jobs -->
-<!-- <section class="jobs" id="jobs">
-    <div class="title">
-        <p>Um pouco do que fazemos com amor</p>
-        <h2>Nossos Trabalhos</h2>
-    </div>
-    <div class="content">
-        <div class="gallery">
-
-            <?php 
-            $de_query_sql = new WP_Query(array(
-                'post_per_page' => 10,
-                'post_type'  => 'post',
-                'orderby' => 'rand'
-            ));
-                if($de_query_sql->have_posts()){
-                    while($de_query_sql->have_posts()){
-                        $de_query_sql->the_post();
-                       ?>
-                            <div class="img" data-aos="zoom-in">
-                                  <a href="<?php the_permalink()?>"><?php if ( has_post_thumbnail()) the_post_thumbnail('home-thumb'); ?></a>  
-                            </div>
-                        <?php
-                    }
-                }
-            ?>
-
-        </div>
-    </div>
-    <div class="bt-center">
-      
-    </div>
-</section> -->
 
 <!-- section plans -->
 <section class="plans" id="plans">
